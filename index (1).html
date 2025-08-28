@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 2nd Monthsary 💕</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background: linear-gradient(180deg, #0b1b3f, #1a0933);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* 🌟 Twinkling stars background */
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.3); }
+    }
+
+    /* Section styling */
+    section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    /* Photos (Polaroid style) */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .photo {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      transform: rotate(-3deg);
+      transition: all 0.4s ease;
+      width: 200px;
+    }
+
+    .photo img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .photo:hover {
+      transform: rotate(0deg) scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 192, 203, 0.5);
+    }
+
+     /* Letter box */
+    .letter {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 700px;
+      backdrop-filter: blur(8px);
+      font-size: 1.2rem;
+      line-height: 1.8;
+      animation: fadeIn 2s ease forwards;
+    }
+
+
+    /* Typewriter effect */
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid pink;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .1em;
+      animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: pink }
+    }
+
+    /* Smooth fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Fixed Spotify player */
+    .spotify-player {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+      border: 3px solid #ffb6c1;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Floating stickers */
+    .sticker {
+      position: absolute;
+      width: 80px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .sticker.left { top: 20%; left: 5%; }
+    .sticker.right { bottom: 15%; right: 5%; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .cursor-image {
+      position: fixed; /* fixed makes it follow the viewport instead of the page */
+      width: 30px;
+    pointer-events: none;
+      opacity: 1;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      z-index: 100000;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 🌟 Stars -->
+  <div class="stars"></div>
+
+  <!-- Stickers -->
+  <img src="https://cdn.cdnstep.com/TczvBpstICjnIZSlQa1T/6-1.thumb128.webp" class="sticker left" alt="My Gela">
+  <img src="https://cdn.cdnstep.com/TczvBpstICjnIZSlQa1T/11-1.thumb128.webp" class="sticker right" alt="My Gela">
+
+  <!-- Section 1 -->
+  <section>
+    <h1 class="fade-in"> Happy 2nd Monthsary, Baho 💙</h1>
+    <p class="fade-in">Scroll down for a little surprise ata ok lol ✨</p>
+  </section>
+
+  <!-- Section 2: Gallery -->
+  <section>
+    <h2 class="fade-in">my fav pics of you hihi</h2>
+    <div class="gallery">
+      <div class="photo fade-in"><img src="https://i.pinimg.com/736x/cb/7d/8d/cb7d8d241c04fdb8c996f34bed3aaa45.jpg" alt="Us"></div>
+      <div class="photo fade-in"><img src="https://i.pinimg.com/736x/bb/c0/43/bbc0430779584bcf9de8398c9b0602ce.jpg" alt="Us"></div>
+      <div class="photo fade-in"><img src="https://i.pinimg.com/736x/cb/99/0d/cb990db0b8d9d4cf5f3dac7a19fdac87.jpg" alt="Us"></div>
+    </div>
+  </section>
+
+    <!-- Section 3: Letter -->
+  <section>
+    <h2 class="fade-in">💌 A Letter for You</h2>
+     <h3 class="fade-in">Click the star hehe</h3>
+    <div class="letter fade-in">
+      <p class="typewriter">Happy 2nd Monthsary, My Gela!</p>
+    </div>
+  </section>
+
+
+  <!-- JS for stars + scroll animations -->
+  <script>
+    // generate stars
+    const starsContainer = document.querySelector('.stars');
+    for (let i = 0; i < 80; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDuration = (Math.random() * 2 + 1) + 's';
+      starsContainer.appendChild(star);
+    }
+
+    // fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      faders.forEach(fader => {
+        const boxTop = fader.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          fader.classList.add('show');
+        }
+      });
+    });
+  </script>
+  <!-- Spotify Player (replace link with your song) -->
+  <div class="spotify-player">
+    <iframe style="border-radius:12px" 
+     src="https://open.spotify.com/embed/track/6GqMDizZdvEP8ASFTuK4B7?utm_source=generator"
+      width="300" height="80" frameborder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy"></iframe>
+  </div>
+<!-- ⭐ Floating Star -->
+<div class="letter-icon" onclick="openLetter()">⭐</div>
+
+<!-- Popup -->
+<div id="letter-popup" class="letter-popup">
+  <div class="letter-content"> <!-- use the correct class -->
+    <span class="close-btn" onclick="closeLetter()">&times;</span>
+    <div style="white-space: pre-wrap; font-family: 'Poppins', sans-serif; font-size: 1.2rem; line-height: 1.8; color: #2a2a2a;">
+</p>Hi, bebe! Hehe, happy second monthsary! This may sound cliché, but honestly, who cares, bruh?</p>
+<img src="https://i.pinimg.com/originals/d7/a4/6a/d7a46a0f26c03d2eb10c620922eca84c.gif" style="width:90px; display:block; margin:10px auto;">
+</p>First of all, I just want to say thank you. Like, for real—thank you for making the first move (crush na crush mo kasi ako??) and for confessing in a way that I like hehe. I still remember that moment, and I’ll never get tired of replaying it in my head. I appreciate every little thing you do for me—even the things you think I don’t notice, I actually do. From the way you check up on me, to the random things you say just to make me laugh, to the effort you put into making me feel loved… I see all of it, baby. And I’ll never stop reminding you that I love you so much. I don’t ever want you to doubt that, not even for a second.</p>
+
+Second, these two months? Bruh, they went by so bilis wtf. But every single day with you feels different in the best way. Even in the simplest moments—our asaran ok, random conversations, or late-night talks—you somehow make everything feel special. I didn’t expect to feel this kind of happiness again, but here you are, proving me wrong in the best possible way. You make me laugh until my stomach hurts, you make me feel safe even when everything around me feels overwhelming, and you make me feel like I’m more than enough. You are literally the highlight of my days, baby. It’s hard to put into words, but it feels like everything becomes lighter just because you exist in my life.
+
+Third, I want to remind you that I’m not going anywhere. I’m staying. I’m choosing you, over and over, even through the ups and downs, the busy days, and the tampuhan when you're napipikon lol pikunin. I’m not promising perfection, baby, but what I can promise is that you’ll never have to go through any of it alone. I’ll be with you through the good, the bad, and everything in between hehe. You’re the person I want to share my wins with, my rants, my random thoughts, and even my quiet moments. I’m not just in this for now—I’m in this for the long azz run okeyyy
+
+newayz happy second monthsary to us, bebe. More laughter, more asaran, more memories, more monthsaries, and even more years ahead of us, pleaseeee. Thank you for being mine and for letting me be yours. I swear I’ll keep choosing you every single day, even when we away or joke around too much. I love you more than you’ll ever know, baby. Like, fr fr istg tbh ngl lmao no cap, it’s you. Always you.
+    </div>
+  </div>
+</div>
+
+<style>
+/* Make sure the popup and star float on top */
+.letter-icon {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 99999;
+  color: gold;
+}
+
+.letter-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  z-index: 99998;
+}
+
+.letter-content {
+  background-color: #fff8f5 !important; /* solid cream */
+  color: #2a2a2a;
+  margin: 5% auto;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto; /* scroll for long text */
+  position: relative;
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.7);
+  backdrop-filter: none !important; /* remove blur completely */
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function openLetter() {
+  document.getElementById("letter-popup").style.display = "block";
+}
+function closeLetter() {
+  document.getElementById("letter-popup").style.display = "none";
+}
+</script>
+
+<script>
+const cursorImages = [
+  'https://cdn.cdnstep.com/oz9fvsyXj3ytFtf3By1I/5-1.thumb128.webp', // nailong
+  'https://cdn.cdnstep.com/TczvBpstICjnIZSlQa1T/6-1.thumb128.webp', // nailong
+  'https://cdn.cdnstep.com/TczvBpstICjnIZSlQa1T/18-1.thumb128.webp'  // nailong
+];
+
+document.addEventListener('mousemove', (e) => {
+  const img = document.createElement('img');
+  img.src = cursorImages[Math.floor(Math.random() * cursorImages.length)];
+  img.classList.add('cursor-image');
+  img.style.left = (e.clientX - 15) + 'px'; // center the image on cursor
+  img.style.top = (e.clientY - 15) + 'px';
+  document.body.appendChild(img);
+
+  // Animate float, shrink, fade
+  setTimeout(() => {
+    img.style.transform = `translateY(-40px) scale(0.5) rotate(${Math.random()*360}deg)`;
+    img.style.opacity = 0;
+  }, 50);
+
+  // Remove after animation
+  setTimeout(() => img.remove(), 700);
+});
+</script>
+
+
+</body>
+</html>
